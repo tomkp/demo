@@ -1,0 +1,31 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "author": "tom@tomkp.com",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babelify": "^6.3.0",
+    "browserify": "^11.1.0",
+    "less": "^2.5.1",
+    "mochify": "^2.13.0",
+    "react-tools": "^0.13.3",
+    "watchify": "^3.4.0",
+    "watchy": "^0.6.4"
+  },
+  "scripts": {
+    "app:watch": "watchify src/Application.js -t -o dist/compiled.js",
+    "css:watch": "watchy -w less -- bash -c './node_modules/less/bin/lessc ./less/app.less ./dist/styles.css'",
+    "watch": "npm run app:watch & npm run css:watch"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify"
+      ]
+    ]
+  }
+}
