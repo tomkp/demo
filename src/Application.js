@@ -15,7 +15,7 @@ const Application = React.createClass({
                     </div>
                 </div>
                 <div className="flex">
-                    <Items list={[1,2,3,4,5]} />
+                    <Items list={[1,2,3,4,5, 6]} />
                 </div>
             </div>
         )
